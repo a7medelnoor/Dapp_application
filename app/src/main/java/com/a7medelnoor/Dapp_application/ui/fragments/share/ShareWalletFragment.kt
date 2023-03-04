@@ -1,4 +1,4 @@
-package com.a7medelnoor.Dapp_application.ui.fragments
+package com.a7medelnoor.Dapp_application.ui.fragments.share
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
