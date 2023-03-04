@@ -1,28 +1,23 @@
 package com.a7medelnoor.Dapp_application.ui
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.a7medelnoor.Dapp_application.R
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var buttonConnectWallet: Button
-
+    private lateinit var appBarConfiguration: AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
 
-        buttonConnectWallet = findViewById(R.id.connect_metamsk)
-        // connect metamask
-        buttonConnectWallet.setOnClickListener {
-            connectWalletMetaMask()
-        }
-        // connect wallet
     }
 
-    fun connectWalletMetaMask() {
-
-    }
 }
