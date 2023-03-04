@@ -32,7 +32,9 @@ class WalletFunctionFragment : Fragment() {
         viewmodel.getAccounts().observe(viewLifecycleOwner) {
             Log.d(TAG, "Account: $it")
             binding.walletBalance.text = it.toString()
-
+            binding.shareAddress.setOnClickListener {
+                // share address to NFC device
+            }
         }
 
     }
