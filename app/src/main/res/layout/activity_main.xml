@@ -5,41 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
-
-    <TextView
-        android:id="@+id/connect_wallet_text_title"
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:text="Welcome to AVI Crypto app"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:theme="@style/Theme.Dapp_application.AppBarOverlay">
 
-    <TextView
-        android:id="@+id/connect_wallet_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Connect to your wallet"
-        android:textSize="24sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@+id/connect_wallet_text_title"
-        app:layout_constraintHorizontal_bias="0.353"
-        app:layout_constraintStart_toStartOf="@+id/connect_wallet_text_title"
-        app:layout_constraintTop_toBottomOf="@+id/connect_wallet_text_title" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Dapp_application.PopupOverlay" />
 
-    <Button
-        android:id="@+id/connect_metamsk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:backgroundTint="#4CAF50"
-        android:text="Connect Wallet"
-        android:textColor="#ffffff"
-        app:layout_constraintEnd_toEndOf="@+id/connect_wallet_text_title"
-        app:layout_constraintStart_toStartOf="@+id/connect_wallet_text_title"
-        app:layout_constraintTop_toBottomOf="@+id/connect_wallet_text_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/content_main" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
