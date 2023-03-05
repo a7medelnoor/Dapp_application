@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/connectWalletFragment">
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.a7medelnoor.Dapp_application.ui.fragments.wallet.ConnectingWalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_connecting_wallet" >
+        <action
+            android:id="@+id/action_walletFragment_to_walletFunctionFragment"
+            app:destination="@id/walletFunctionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareWalletFragment"
+        android:name="com.a7medelnoor.Dapp_application.ui.fragments.share.ShareWalletFragment"
+        android:label="fragment_share_wallet"
+        tools:layout="@layout/fragment_share_wallet" />
+    <fragment
+        android:id="@+id/connectWalletFragment"
+        android:name="com.a7medelnoor.Dapp_application.ui.fragments.connect.ConnectWalletFragment"
+        android:label="fragment_connect_wallet"
+        tools:layout="@layout/fragment_connect_wallet" >
+        <action
+            android:id="@+id/action_connectWalletFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFunctionFragment"
+        android:name="com.a7medelnoor.Dapp_application.ui.fragments.wallet_function.WalletFunctionFragment"
+        android:label="fragment_wallet_function"
+        tools:layout="@layout/fragment_wallet_function" >
+        <action
+            android:id="@+id/action_walletFunctionFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+</navigation>
