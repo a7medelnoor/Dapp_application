@@ -12,7 +12,7 @@
         android:layout_marginTop="100dp"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:text="Welcome to AVI Crypto app"
+        android:text="@string/welcome_to_vai_crypto_app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Connect to your wallet"
+        android:text="@string/connect_to_your_wallet"
         android:textSize="24sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="@+id/connect_wallet_text_title"
@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:backgroundTint="#4CAF50"
-        android:text="Connect Wallet"
-        android:textColor="#ffffff"
+        android:text="@string/connect_wallet"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/connect_wallet_text_title"
         app:layout_constraintStart_toStartOf="@+id/connect_wallet_text_title"
         app:layout_constraintTop_toBottomOf="@+id/connect_wallet_text_title" />
